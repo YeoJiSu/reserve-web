@@ -1,0 +1,272 @@
+<header id="header" className="header scroll">
+    <div className="header-inner">
+        <div className="head-title">
+
+
+
+
+
+            <a href="javascript:history.back();" className="btn-back"><span className="blind">뒤로</span></a>
+
+            <strong>객실예약</strong>
+
+
+        </div>
+        <strong className="logo">
+            <a href="/main/ko/index">
+                <img src="/static/image/logo.png" alt="Lotte Resort">
+            </a>
+        </strong>
+        <button type="button" className="btn-gnb-open"><span className="bar"></span>
+        <span className="blind">메뉴열기</span></button>
+        <nav id="nav">
+            <div className="nav-inner">
+                <div className="util-menu">
+                    <div className="welcome">
+                        <p>
+                            환영합니다. <br>
+                            <!--<a data-th-href="@{/main/__${urlLang}__/member/login}" className="login" data-th-text="#{header.request-login}">로그인 해주세요</a>-->
+                            <!--<a data-th-unless="${isLpoint}" data-th-href="|javascript:fnGlobalLogin('${resortUrl}','${urlLang}');|" className="login" data-th-text="#{header.request-login}">로그인 해주세요</a>-->
+                            <a href="/main/ko/member/login" className="login">로그인 해주세요</a>
+                        </p>
+                    </div>
+
+                    <div className="util-menu-group top">
+
+                        <div className="mob-top-line">
+                            <!--<a data-th-unless="${isLpoint}" href="http://www.skyhill.co.kr" className="menu sky" target="_blank"><span data-th-text="#{header.skyhill}">롯데스카이힐 CC</span></a>-->
+                            <!--// [p] 20190401 추가 -->
+                            <!--<a href="https://www.lotteskyhill.com" className="menu sky" target="_blank"><span data-th-text="#{header.skyhill}">롯데스카이힐 CC</span></a>-->
+                            <!--// [p] 20200423 개발서버로 우선 수정 -->
+                            <a href="https://www.lotteskyhill.com" className="menu sky" target="_blank"><span>롯데스카이힐
+                                    CC</span></a>
+                            <!--<a data-th-unless="${isLpoint}" href="https://www.lottehotel.com/global/ko.html" target="_blank" className="menu sky mob-view2" data-th-text="#{main.main.501}"><span>롯데호텔</span></a>-->
+                            <a href="/main/ko/member/membershipInfo" className="menu mob-view2"
+                                target="_blank"><span>멤버십</span></a>
+                        </div>
+
+                        <!--<a data-th-href="@{/main/__${urlLang}__/member/login}" className="menu web-view2"><span data-th-text="#{header.login}">로그인</span></a>-->
+                        <!--<a data-th-unless="${isLpoint}" data-th-href="|javascript:fnGlobalLogin('${resortUrl}','${urlLang}');|" className="menu web-view2"><span data-th-text="#{header.login}">로그인</span></a>-->
+                        <a href="/main/ko/member/login" className="menu web-view2"><span>로그인</span></a>
+                        <!--<a data-th-unless="${isLpoint}" href="#" className="menu" id="btnJoin"><span data-th-text="#{header.join}">회원가입</span></a>-->
+                        <a href="#" className="menu" id="btnLpointJoin"><span>회원가입</span></a>
+                        <a href="/main/ko/member/membershipInfo" className="menu web-view2"><span>멤버십</span></a>
+
+
+
+                    </div>
+
+                    <div className="util-menu-group bottom">
+                        <a href="javascript:openPop(ReserCheckA);" className="menu"><span>예약조회</span></a>
+
+
+                        <a href="javascript:openPop(ReserCheckA, 'themepark');" className="menu mob-view"><span>이용권
+                                구매현황</span></a>
+                    </div>
+
+                    <div className="menu">
+                        <div className="lang-list">
+                            <div className="lang">
+                                <a href="#page" className="select-link"><span className="blind">언어 선택</span></a>
+                                <span className="selected">한국어</span>
+
+
+
+                            </div>
+                            <ul className="select-lang hide">
+
+                                <li><a href="/main/en/index"><span>English</span></a></li>
+                                <li><a href="/main/ja/index"><span>日本語</span></a></li>
+                                <li><a href="/main/zh/index"><span>中文</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="gnb-area">
+                    <ul className="gnb-menu">
+                        <li className="home mob-view"><a href="/main/ko/index"><span>HOME</span></a></li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>통합예약</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/main/ko/reservation/room-list" target="_self">
+                                        <span>객실현황</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/reservation/accommodation" target="_self">
+                                        <span>객실예약</span>
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="/main/ko/reservation/package" target="_self">
+                                        <span>패키지예약</span>
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="/main/ko/reservation/lottery/information" target="_self">
+                                        <span>추첨예약</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/reservation/theme-park-ticket" target="_self">
+                                        <span>테마파크이용권</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>리조트안내</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/sokcho/ko/about" target="_self">
+                                        <span>롯데리조트속초</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/buyeo/ko/about" target="_self">
+                                        <span>롯데리조트부여</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/artvillas/ko/about" target="_self">
+                                        <span>제주아트빌라스</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.lottehotel.com/arai-resort/ko.html" target="_blank">
+                                        <span>롯데아라이리조트</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/theme-park" target="_self">
+                                        <span>테마파크</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/sokcho/ko/dining" target="_self">
+                                        <span>다이닝</span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>이벤트&amp;패키지</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/main/ko/package-event/event/list" target="_self">
+                                        <span>이벤트</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/package-event/package/list" target="_self">
+                                        <span>패키지</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>세미나&amp;웨딩</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/main/ko/wedding-conference-list" target="_self">
+                                        <span>세미나&amp;웨딩안내</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/wedding-conference" target="_self">
+                                        <span>예약문의</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>리조트 소식</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/main/ko/about/resort-nearby" target="_self">
+                                        <span>트레블플래너</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/battleTour/list" target="_self">
+                                        <span>배틀투어</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>고객센터</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/main/ko/about/resort-news" target="_self">
+                                        <span>리조트뉴스</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/customer/faq" target="_self">
+                                        <span>FAQ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/customer/customers" target="_self">
+                                        <span>고객의소리</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/customer/lost-and-found" target="_self">
+                                        <span>분실물센터</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">
+                                <span>분양안내</span>
+                            </a>
+                            <ul className="depth2">
+                                <li>
+                                    <a href="/main/ko/buying-guide/salesnews" target="_self">
+                                        <span>분양회원뉴스</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/buying-guide" target="_self">
+                                        <span>분양상품·이용안내</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/buying-guide/inquiry" target="_self">
+                                        <span>분양상담신청</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/main/ko/about/alliance" target="_self">
+                                        <span>분양회원제휴리조트</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" className="btn-gnb-close ico-close"><span className="blind">메뉴닫기</span></button>
+        </nav>
+    </div>
+</header>
