@@ -9,14 +9,23 @@ const HeaderPresenter = () => {
       <HeaderSS isLogin={isLogin}>
         <div className={'header-top'}>
           <div className={'header-login'}>
-            {isLogin ? <span>로그인/회원가입</span> : <span>OOO 님</span>}
+            <p> 러브 홀스</p>
+            {isLogin ? (
+              <p>
+                <span>나의 기승</span>
+                <span>OOO 님</span>
+              </p>
+            ) : (
+              <span>로그인 / 회원가입 </span>
+            )}
           </div>
         </div>
         <div className={'header-bottom'}>
-          <h1>로고</h1>
+          {/*<h1>ㅇㅖ약</h1>*/}
           <ul>
             <li>빠른 예약</li>
-            <li>승마장 보러가기</li>
+            <li>이용 안내</li>
+            <li></li>
           </ul>
         </div>
       </HeaderSS>

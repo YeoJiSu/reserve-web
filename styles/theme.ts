@@ -1,4 +1,5 @@
 export const theme = {
-    red: '#ff5454',
-    blue: '#566ff5',
-}
+  red: '#ff5d5d',
+  blue: '#c0caff',
+  purple: '#7958ff',
+};
