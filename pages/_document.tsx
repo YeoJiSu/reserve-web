@@ -1,4 +1,4 @@
-import { NextSeo } from 'next-seo';
+//import { NextSeo } from 'next-seo';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
@@ -8,11 +8,12 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ko">
         <Head>
+          {/*
           <NextSeo
             title="승마장 예약하는 서비스"
             description="승마장 예약하는 서비스입니다. "
             canonical="https://www.canonical.ie/"
-          />
+        />*/}
         </Head>
         <body>
           <Main />
