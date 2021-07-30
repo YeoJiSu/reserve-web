@@ -1,12 +1,16 @@
 import Layout from 'components/Layout';
 import React from 'react';
 
-import Varcel from '../public/vercel.svg';
-
 const IndexPage = (): JSX.Element => {
   return (
     <Layout>
-      <img src={Varcel} />
+      <main className={'styles.main'}>
+        <h1 className={'styles.title'}>``</h1>
+        <p className={'styles.description'}>
+          Get started by editing
+          <code className={'styles.code'}>pages/index.js</code>
+        </p>
+      </main>
     </Layout>
   );
 };
