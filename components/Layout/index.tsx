@@ -1,12 +1,12 @@
-import React from 'react';
-import FooterContainer from './FooterComponent/Footer.Container';
-import HeaderContainer from './HeaderComponent/Header.Container';
+import React from "react";
+import FooterContainer from "./FooterComponent/Footer.Container";
+import HeaderContainer from "./HeaderComponent/Header.Container";
 
-const Layout = (asd) => {
+const Layout = ({ children }) => {
   return (
     <>
       <HeaderContainer />
-      <span>{asd.children}</span>
+      <span>{children}</span>
       <FooterContainer />
     </>
   );

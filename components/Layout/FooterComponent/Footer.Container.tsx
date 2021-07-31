@@ -1,5 +1,5 @@
-import React from 'react';
-import FooterPresenter from './Footer.Presenter';
+import React from "react";
+import FooterPresenter from "./Footer.Presenter";
 
 const FooterContainer = () => {
   return (

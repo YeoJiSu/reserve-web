@@ -1,9 +1,9 @@
 //import '../styles/globals.css’;
-import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
-import { theme } from 'styles/theme';
-import React from 'react';
-import { GlobalStyles } from 'styles/global';
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "styled-components";
+import { theme } from "styles/theme";
+import React from "react";
+import { GlobalStyles } from "styles/global";
 
 // 페이지가 로딩될 때 가장 먼저 실행됨.
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {

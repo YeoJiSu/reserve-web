@@ -1,6 +1,6 @@
 // 승마장 검색 페이지
-import Layout from 'components/Layout';
-import React from 'react';
+import Layout from "components/Layout";
+import React from "react";
 
 const HorseRidingSearchPage = (): JSX.Element => {
   return (

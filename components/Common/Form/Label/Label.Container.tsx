@@ -1,5 +1,5 @@
-import React from 'react';
-import LabelPresenter from './Label.Presenter';
+import React from "react";
+import LabelPresenter from "./Label.Presenter";
 
 const LabelContainer = () => {
   return (

@@ -1,9 +1,7 @@
 // 선택한 1개의 승마장을 자세히 보여주는 페이지
-import Layout from 'components/Layout';
-import { useRouter } from 'next/dist/client/router';
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import Layout from "components/Layout";
+import { useRouter } from "next/dist/client/router";
+import { useEffect, useState } from "react";
 
 const DetailPage = (): JSX.Element => {
   // useEffect(() => {}, []);
