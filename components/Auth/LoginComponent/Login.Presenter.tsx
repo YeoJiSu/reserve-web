@@ -75,7 +75,7 @@ const LoginPresenter = ({
           <LocalSignupBox>
             <p>아직 회원이 아니신가요?</p>
             <div>
-              <Link href="/signup">회원가입</Link>
+              <Link href="/auth/register">회원가입</Link>
             </div>
           </LocalSignupBox>
           {isLoading && <VscLoading className="loading" />}

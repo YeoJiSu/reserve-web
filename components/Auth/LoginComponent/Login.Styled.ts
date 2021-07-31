@@ -43,8 +43,21 @@ export const LoginHeader = styled.div`
 export const LoginFormBox = styled.form`
   display: inline-block;
   text-align: center;
-  width: 80%;
 
+  width: 60%;
+  min-width: 400px;
+
+  input,
+  button,
+  h1,
+  h2,
+  h3,
+  h4 p {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
   & label {
   }
 
