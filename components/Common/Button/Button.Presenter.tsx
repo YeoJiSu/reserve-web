@@ -1,10 +1,10 @@
 import React from "react";
-import ButtonContainer from "./Button.Container";
+import { ButtonStyled } from "./Button.Styled";
 
 const ButtonPresenter = () => {
   return (
     <>
-      <ButtonContainer />
+      <ButtonStyled />
     </>
   );
 };

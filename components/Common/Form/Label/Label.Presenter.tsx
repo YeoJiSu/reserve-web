@@ -1,10 +1,10 @@
 import React from "react";
-import LabelContainer from "./Label.Container";
+import { LabelStyled } from "./Label.Styled";
 
 const LabelPresenter = () => {
   return (
     <>
-      <LabelContainer />
+      <LabelStyled />
     </>
   );
 };
