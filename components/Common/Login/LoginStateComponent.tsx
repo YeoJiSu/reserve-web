@@ -1,3 +1,5 @@
+import React from "react";
+import Link from "next/link";
 const LoginStateComponent = ({ isLogin }): JSX.Element => {
   // 로그인 상태일 떄
   if (isLogin === true) {
@@ -17,8 +19,12 @@ const LoginStateComponent = ({ isLogin }): JSX.Element => {
   return (
     <>
       <p>
-        <span>로그인</span>
-        <span>회원가입</span>
+        <span>
+          <Link href="/auth/login">로그인</Link>
+        </span>
+        <span>
+          <Link href="/auth/register">회원가입</Link>
+        </span>
       </p>
     </>
   );
