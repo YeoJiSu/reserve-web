@@ -6,17 +6,17 @@ import { GlobalStyles } from "styles/global";
 import { NextSeo } from "next-seo";
 
 const DEFAULT_SEO = {
-  title: "Next.js SEO Plugin",
-  description: "SEO made easy for Next.js projects",
+  title: "러브 홀스 - 종합 승마장 예약 시스템",
+  description: "러브 홀스 - 종합 승마장 예약 시스템",
   openGraph: {
     type: "website",
-    locale: "en_IE",
+    locale: "ko_KR",
     url: "https://www.garymeehan.ie",
-    title: "Next.js Seo",
-    description: "SEO made easy for Next.js projects",
+    title: "러브 홀스",
+    description: "러브 홀스 - 종합 승마장 예약 시스템",
     image:
       "https://prismic-io.s3.amazonaws.com/gary-blog%2F3297f290-a885-4cc6-9b19-3235e3026646_default.jpg",
-    site_name: "GaryMeehan.ie",
+    site_name: "러브 홀스",
     imageWidth: 1200,
     imageHeight: 1200,
   },
