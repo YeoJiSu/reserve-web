@@ -1,8 +1,8 @@
-const path = require('path');
+const path = require("path");
 
-const withImages = require('next-images');
+const withImages = require("next-images");
 module.exports = withImages({
-  exclude: path.resolve(__dirname, 'public/static/'),
+  exclude: path.resolve(__dirname, "public/assets/"),
   webpack(config) {
     return config;
   },
@@ -15,7 +15,7 @@ module.exports = {
       issuer: { and: [/\.(js|ts|md)x?$/] },
       use: [
         {
-          loader: '@svgr/webpack',
+          loader: "@svgr/webpack",
           options: {
             prettier: false,
             svgo: true,
