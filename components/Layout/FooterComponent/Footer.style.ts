@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const FooterSS = styled.div`
-  height: 100px;
+  color: white;
 
-  background-color: ${(props) => props.theme.blue};
+  background-color: gray;
   .footer-top {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    font-size: 20px;
+    min-width: 500px;
 
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    text-align: center;
-    margin-left: 200px;
-    margin-right: 200px;
+    .image {
+      text-align: center;
 
-    div {
+      .img {
+      }
+    }
+    .num {
+      text-align: center;
+      p {
+      }
     }
   }
   .footer-bottom {
