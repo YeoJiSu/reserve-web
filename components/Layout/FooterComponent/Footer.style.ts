@@ -6,6 +6,7 @@ export const FooterSS = styled.div`
 
   background-color: gray;
   .footer-top {
+    padding-top: 10px;
     font-size: 20px;
 
     .image {
@@ -26,6 +27,7 @@ export const FooterSS = styled.div`
   }
   .footer-bottom {
     padding-top: 50px;
+    padding-bottom: 10px;
     text-align: center;
   }
 `;
