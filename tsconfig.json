@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
+    "types": ["@types/node"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./",
     "typeRoots": ["node_modules/@types"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,8 +14,29 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "downlevelIteration": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/action/*": ["action/*"],
+      "@/components/*": ["components/*"],
+      "@/containers/*": ["containers/*"],
+      "@/pages/*": ["pages/*"],
+      "@/assets/*": ["public/assets/*"],
+      "@/reducers/*": ["reducers/*"],
+      "@/sagas/*": ["sagas/*"],
+      "@/store/*": ["store/*"],
+      "@/styles/*": ["styles/*"],
+      "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "reducers/*",
+    "types/image.d.ts"
+  ],
   "exclude": ["node_modules"]
 }

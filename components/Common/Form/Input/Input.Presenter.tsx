@@ -1,10 +1,10 @@
-import React from 'react';
-import InputContainer from './Input.Container';
+import React from "react";
+import { InputStyled } from "./Input.Styled";
 
 const InputPresenter = () => {
   return (
     <>
-      <InputContainer />
+      <InputStyled />
     </>
   );
 };

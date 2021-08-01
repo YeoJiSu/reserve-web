@@ -1,10 +1,10 @@
-import React from 'react';
-import LoginButtonContainer from './LoginButton.Container';
+import React from "react";
+import { LoginButtonStyled } from "./LoginButton.Styled";
 
 const LoginButtonPresenter = () => {
   return (
     <>
-      <LoginButtonContainer />
+      <LoginButtonStyled />
     </>
   );
 };

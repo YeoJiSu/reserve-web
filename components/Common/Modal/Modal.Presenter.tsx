@@ -1,10 +1,10 @@
-import React from 'react';
-import ModalContainer from './Modal.Container';
+import React from "react";
+import { ModalStyled } from "./Modal.Styled";
 
 const ModalPresenter = () => {
   return (
     <>
-      <ModalContainer />
+      <ModalStyled />
     </>
   );
 };
