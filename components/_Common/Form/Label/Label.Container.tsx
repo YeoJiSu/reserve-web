@@ -1,7 +1,7 @@
 import React from "react";
 import LabelPresenter from "./Label.Presenter";
 
-const LabelContainer = () => {
+const LabelContainer = (): JSX.Element => {
   return (
     <>
       <LabelPresenter />

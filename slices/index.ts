@@ -3,7 +3,8 @@ import { HYDRATE } from "next-redux-wrapper";
 
 import userSlice from "./user";
 
-const rootReducer = (state: any, action: any) => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const rootReducer = (state: any, action: any): any => {
   switch (action.type) {
     case HYDRATE:
       // console.log("HYDRATE", action);

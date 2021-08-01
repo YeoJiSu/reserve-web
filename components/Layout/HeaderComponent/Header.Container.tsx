@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import HeaderPresenter from "./Header.Presenter";
 import { useSelector } from "react-redux";
 
-const HeaderContainer = () => {
+const HeaderContainer = (): JSX.Element => {
   const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
   const [loginState, setLoginState] = useState<boolean>(isLoggedIn);
 

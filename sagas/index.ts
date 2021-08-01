@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { fork, all } from "@redux-saga/core/effects";
 import reservationSaga from "@/sagas/reservationSaga";
 

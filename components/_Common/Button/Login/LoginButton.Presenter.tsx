@@ -1,7 +1,7 @@
 import React from "react";
 import { LoginButtonStyled } from "./LoginButton.Styled";
 
-const LoginButtonPresenter = () => {
+const LoginButtonPresenter = (): JSX.Element => {
   return (
     <>
       <LoginButtonStyled />

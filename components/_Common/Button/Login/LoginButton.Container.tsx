@@ -1,7 +1,7 @@
 import React from "react";
 import LoginButtonPresenter from "./LoginButton.Presenter";
 
-const LoginButtonContainer = () => {
+const LoginButtonContainer = (): JSX.Element => {
   return (
     <>
       <LoginButtonPresenter />

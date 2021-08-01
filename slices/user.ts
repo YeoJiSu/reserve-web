@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { signup, logIn, logOut, loadUser } from "@/action/user";
 import { UserFormType } from "@/types/loginFormType";

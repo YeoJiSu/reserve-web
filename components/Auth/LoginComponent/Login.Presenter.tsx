@@ -1,7 +1,5 @@
-import React, { ChangeEvent, Dispatch, SetStateAction } from "react";
+import React from "react";
 import Link from "next/link";
-import Logo from "@/assets/logo.svg";
-import LoginState from "@/components/_Common/Login/LoginState";
 import {
   ErrorText,
   LoginFormBox,

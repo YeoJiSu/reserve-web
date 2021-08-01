@@ -1,8 +1,13 @@
 import React from "react";
 import Link from "next/link";
-const LoginStateComponent = ({ isLogin }): JSX.Element => {
+interface LoginStateComponentPorps {
+  isLoggedIn: boolean;
+}
+const LoginStateComponent = ({
+  isLoggedIn,
+}: LoginStateComponentPorps): JSX.Element => {
   // 로그인 상태일 떄
-  if (isLogin === true) {
+  if (isLoggedIn === true) {
     return (
       <>
         <p>

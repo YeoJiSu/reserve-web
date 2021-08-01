@@ -1,7 +1,7 @@
 import React from "react";
 import ModalPresenter from "./Modal.Presenter";
 
-const ModalContainer = () => {
+const ModalContainer = (): JSX.Element => {
   return (
     <>
       <ModalPresenter />

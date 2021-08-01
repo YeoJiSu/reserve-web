@@ -1,7 +1,7 @@
 import React from "react";
 import FooterPresenter from "./Footer.Presenter";
 
-const FooterContainer = () => {
+const FooterContainer = (): JSX.Element => {
   return (
     <>
       <FooterPresenter />

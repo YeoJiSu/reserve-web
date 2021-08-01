@@ -1,14 +1,8 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import wrapper from "store/configureStore";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-import { loadUser } from "@/action/user";
 import { RootState } from "@/slices/index";
-import { logOut } from "@/action/user";
-import Router from "next/router";
 const FindIDPage = (): JSX.Element => {
-  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
   const { email, nickname } = useSelector(
     (state: RootState) => state.user.user,
   );
