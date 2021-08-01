@@ -22,7 +22,7 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
       font-size: 20px;
       font-weight: 700;
       width: 100%;
-      text-align: center;
+      text-align: left;
       // padding: 10px 30px 10px 0px;
       color: ${({ isLoggedIn }) =>
         isLoggedIn ? "#733000d9" : "rgb(47 48 51 / 89%)"};
