@@ -1,7 +1,6 @@
 import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
-import "@/styles/boot.css";
 import React from "react";
 import { GlobalStyles } from "styles/global";
 import { NextSeo } from "next-seo";

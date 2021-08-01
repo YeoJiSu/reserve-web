@@ -5339,7 +5339,6 @@ svgo@^2.0.3:
     csso "^4.2.0"
     stable "^0.1.8"
 
-<<<<<<< HEAD
 swiper@^6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.8.0.tgz#61c850f49ba778e403f00a01fe0b768bd85d0d20"
@@ -5348,8 +5347,6 @@ swiper@^6.8.0:
     dom7 "^3.0.0"
     ssr-window "^3.0.0"
 
-=======
->>>>>>> JWT 로그인 테스트 코드 추가
 swr@^0.5.6:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/swr/-/swr-0.5.6.tgz#70bfe9bc9d7ac49a064be4a0f4acf57982e55a31"

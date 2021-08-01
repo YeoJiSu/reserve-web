@@ -3,16 +3,16 @@ import { HeaderSS } from "@/components/Layout/HeaderComponent//Header.style";
 
 import LoginStateComponent from "@/components/_Common/Login/LoginStateComponent";
 
-const HeaderPresenter = ({ isLoggedIn }) => {
+const HeaderPresenter = ({ isLogin }) => {
   return (
     <>
-      <HeaderSS isLoggedIn={isLoggedIn}>
+      <HeaderSS isLogin={isLogin}>
         <div className={"header-top"}>
           <p>
             🦄 러브 홀스 <a>love horse</a>
           </p>
           <div className={"header-login"}>
-            <LoginStateComponent isLoggedIn={isLoggedIn} />
+            <LoginStateComponent isLogin={isLogin} />
           </div>
         </div>
         <div className="header-bottom">

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 //styled-component 적용하기
-export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
+export const HeaderSS = styled.div<{ isLogin }>`
   //background-color: ${(props) => props.theme.blue};
   //background-color: #ffffff;
   //opacity: 0.5;
@@ -26,8 +26,8 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
       width: 100%;
       text-align: center;
       // padding: 10px 30px 10px 0px;
-      color: ${({ isLoggedIn }) =>
-        isLoggedIn ? "#733000d9" : "rgb(47 48 51 / 89%)"};
+      color: ${({ isLogin }) =>
+        isLogin ? "#733000d9" : "rgb(47 48 51 / 89%)"};
       a {
         padding-left: 5px;
         font-family: cursive;
@@ -51,8 +51,7 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
         width: 170px;
         font-size: 15px;
         font-weight: 500;
-        background-color: ${({ isLoggedIn }) =>
-          isLoggedIn ? "#8236009c" : "gray"};
+        background-color: ${({ isLogin }) => (isLogin ? "#8236009c" : "gray")};
         color: white;
       }
     }
@@ -71,8 +70,7 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
       margin-left: 20px;
     }
     li:hover {
-      background-color: ${({ isLoggedIn }) =>
-        isLoggedIn ? "#8236009c" : "gray"};
+      background-color: ${({ isLogin }) => (isLogin ? "#8236009c" : "gray")};
       color: white;
       padding: 5px 5px;
       border-radius: 20%;
