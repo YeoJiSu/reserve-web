@@ -4,7 +4,7 @@ import axios, { AxiosResponse } from "axios";
 import Cookies from "js-cookie";
 
 // API 서버를 등록함
-axios.defaults.baseURL = "http://strapi.kspark.link";
+axios.defaults.baseURL = "https://strapi.kspark.link";
 
 // 회원가입
 export const signup = createAsyncThunk(
@@ -14,7 +14,7 @@ export const signup = createAsyncThunk(
       const response = await axios.post("/signup", data);
       return response.data;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       return rejectWithValue(error.response.data);
     }
   },
@@ -49,6 +49,6 @@ export const logOut = createAsyncThunk("/user/logOut", async () => {
 // 로그인 상태 불러오기
 export const loadUser = createAsyncThunk("/user/load", async () => {
   const response = await axios.get("/user");
-  console.log(response.data);
+  // console.log(response.data);
   return response.data;
 });

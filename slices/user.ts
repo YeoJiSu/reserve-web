@@ -25,11 +25,11 @@ const userSlice = createSlice({
     builder
       // 회원가입 - 성공
       .addCase(signup.pending, (state, action) => {
-        console.log("pending");
+        // console.log("pending");
       })
       // 회원가입 - 성공
       .addCase(signup.fulfilled, (state, action) => {
-        console.log(action.payload);
+        // console.log(action.payload);
         state.signupDone = true;
       })
       // 회원가입 - 실패
@@ -38,13 +38,13 @@ const userSlice = createSlice({
       })
       // 로그인 - 요청
       .addCase(logIn.pending, (state, action) => {
-        console.log("logIn.pending");
-        console.log("message ::", logIn);
+        // console.log("logIn.pending");
+        // console.log("message ::", logIn);
         state.isLoading = true;
       })
       // 로그인 - 성공
       .addCase(logIn.fulfilled, (state, action) => {
-        console.log("logIn.fulfilled");
+        // console.log("logIn.fulfilled");
         state.isLoading = false;
         state.isLoggedIn = true;
         state.user.identifier = action.payload.identifier;
@@ -52,7 +52,7 @@ const userSlice = createSlice({
       })
       // 로그인 - 실패
       .addCase(logIn.rejected, (state, action: PayloadAction<any>) => {
-        console.log("logIn.rejected");
+        // console.log("logIn.rejected");
         state.isLoading = false;
         state.logInError = action.payload.statusCode;
       })

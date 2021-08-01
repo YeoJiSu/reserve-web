@@ -6,7 +6,7 @@ import userSlice from "./user";
 const rootReducer = (state: any, action: any) => {
   switch (action.type) {
     case HYDRATE:
-      console.log("HYDRATE", action);
+      // console.log("HYDRATE", action);
       return action.payload;
     default: {
       const combineReducer = combineReducers({

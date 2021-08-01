@@ -15,7 +15,7 @@ const FindIDPage = (): JSX.Element => {
 
   useEffect(() => {}, []);
   setTimeout(() => {
-    console.log(isLoggedIn);
+    // console.log(isLoggedIn);
   }, 2000);
 
   return (
