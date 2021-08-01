@@ -1,7 +1,7 @@
 import React from "react";
 import { LabelStyled } from "./Label.Styled";
 
-const LabelPresenter = () => {
+const LabelPresenter = (): JSX.Element => {
   return (
     <>
       <LabelStyled />

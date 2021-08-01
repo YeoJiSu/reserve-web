@@ -25,6 +25,7 @@
       "@/assets/*": ["public/assets/*"],
       "@/reducers/*": ["reducers/*"],
       "@/sagas/*": ["sagas/*"],
+      "@/slices/*": ["slices/*"],
       "@/store/*": ["store/*"],
       "@/styles/*": ["styles/*"],
       "@/types/*": ["types/*"],

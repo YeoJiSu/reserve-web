@@ -1,18 +1,21 @@
 import React from "react";
 import { HeaderSS } from "@/components/Layout/HeaderComponent//Header.style";
 
-import LoginStateComponent from "@/components/Common/Login/LoginStateComponent";
+import LoginStateComponent from "@/components/_Common/Login/LoginStateComponent";
 
-const HeaderPresenter = ({ isLogin }) => {
+interface HeaderPresenterProps {
+  isLoggedIn: boolean;
+}
+const HeaderPresenter = ({ isLoggedIn }: HeaderPresenterProps): JSX.Element => {
   return (
     <>
-      <HeaderSS isLogin={isLogin}>
+      <HeaderSS isLoggedIn={isLoggedIn}>
         <div className={"header-top"}>
           <p>
             🦄 러브 홀스 <a>love horse</a>
           </p>
           <div className={"header-login"}>
-            <LoginStateComponent isLogin={isLogin} />
+            <LoginStateComponent isLoggedIn={isLoggedIn} />
           </div>
         </div>
         <div className="header-bottom">

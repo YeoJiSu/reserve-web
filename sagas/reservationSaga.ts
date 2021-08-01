@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import axios from "axios";
 import { all, fork, takeLatest, call, put } from "typed-redux-saga";
 import {
@@ -9,6 +10,7 @@ function loadReservationAPI() {
   return axios.get("/");
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function* loadReservation(action: any) {
   try {
     const results = yield* call(loadReservationAPI);

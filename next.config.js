@@ -27,4 +27,8 @@ module.exports = {
     });
     return config;
   },
+  reactStrictMode: true,
+  env: {
+    SERVICE_NAME: process.env.SERVICE_NAME,
+  },
 };

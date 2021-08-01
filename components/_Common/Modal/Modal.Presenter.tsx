@@ -1,7 +1,7 @@
 import React from "react";
 import { ModalStyled } from "./Modal.Styled";
 
-const ModalPresenter = () => {
+const ModalPresenter = (): JSX.Element => {
   return (
     <>
       <ModalStyled />

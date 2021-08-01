@@ -11,7 +11,7 @@ const DetailPage = (): JSX.Element => {
 
   useEffect(() => {
     setPassword(router.query.password);
-    console.log(password);
+    // console.log(password);
   }, [router]);
   return (
     <Layout>

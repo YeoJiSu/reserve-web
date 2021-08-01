@@ -1,19 +1,22 @@
+import { RootState } from "@/slices/index";
 import React, { useEffect, useState } from "react";
 import HeaderPresenter from "./Header.Presenter";
+import { useSelector } from "react-redux";
 
-const HeaderContainer = () => {
-  const isLogin = false;
-  const [loginState, setLoginState] = useState<boolean>(isLogin);
+const HeaderContainer = (): JSX.Element => {
+  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  const [loginState, setLoginState] = useState<boolean>(isLoggedIn);
 
+  // console.log(isLoggedIn);
   useEffect(() => {
     if (loginState !== undefined) {
-      setLoginState(isLogin);
+      setLoginState(isLoggedIn);
     }
-  }, [isLogin]);
+  }, [isLoggedIn]);
 
   return (
     <>
-      <HeaderPresenter isLogin={isLogin} />
+      <HeaderPresenter isLoggedIn={isLoggedIn} />
     </>
   );
 };

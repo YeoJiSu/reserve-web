@@ -13,7 +13,8 @@ export const GlobalStyles = createGlobalStyle<{ theme: any }>`
     font-family: 'Lato', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
-  a {
-      text-decoration: none;
-  }
+  a{all: unset;}
+  a:link { all: unset;}
+  a:visited { all: unset;}
+  a:hover { all: unset;}
 `;
