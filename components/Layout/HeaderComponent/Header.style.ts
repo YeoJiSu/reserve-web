@@ -3,13 +3,11 @@ import styled from "styled-components";
 //styled-component 적용하기
 export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   //background-color: ${(props) => props.theme.blue};
-  //background-color: #ffffff;
-  //opacity: 0.5;
-  //background-color: #ff9800;
+
   position: fixed;
   width: 100%;
-  background-color: rgb(255 255 255 / 80%);
-  min-width: 650px;
+  background-color: rgb(255 255 255 / 70%);
+  min-width: 750px;
   .header-top {
     height: 40px;
     display: flex;
@@ -17,9 +15,9 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
-    //justify-content: left;
     flex-wrap: nowrap;
     p {
+      padding-left: 30px;
       color: white;
       font-size: 20px;
       font-weight: 700;
@@ -29,20 +27,21 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
       color: ${({ isLoggedIn }) =>
         isLoggedIn ? "#733000d9" : "rgb(47 48 51 / 89%)"};
       a {
-        padding-left: 5px;
+        padding-left: 10px;
         font-family: cursive;
       }
     }
     .header-login {
-      //width: calc(100% + 200px);
       width: 100%;
+      padding-right: 20px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      //justify-content: space-evenly;
-      //justify-content: left;
       flex-wrap: nowrap;
       height: 100%;
+      p {
+        text-align: right;
+      }
       span {
         border: 1px solid;
         border-radius: 10px;
@@ -60,15 +59,14 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   .header-bottom {
     height: 55px;
     min-width: 1000px;
+    text-align: left;
+
     ul {
-      color: black;
-      padding-left: 15%;
     }
     li {
-      margin: 5px 100px;
+      margin-right: 8%;
       padding: 5px 5px;
       display: inline;
-      margin-left: 20px;
     }
     li:hover {
       background-color: ${({ isLoggedIn }) =>
