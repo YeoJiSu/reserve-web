@@ -1,4 +1,5 @@
-import { AppProps } from "next/app";
+//import '../styles/globals.css’;
+import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
 import React from "react";
@@ -32,7 +33,6 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   // ThemeProvider에서 글로벌하게 CSS 색상을 변수로 관리한다.
   return (
     <ThemeProvider theme={theme}>
-      <NextSeo {...DEFAULT_SEO} />
       <GlobalStyles />
       <Component {...pageProps} />
     </ThemeProvider>

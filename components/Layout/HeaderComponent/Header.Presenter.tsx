@@ -22,7 +22,7 @@ const HeaderPresenter = ({ isLoggedIn }: HeaderPresenterProps): JSX.Element => {
           {/*<h1>ㅇㅖ약</h1>*/}
           <hr />
           <ul>
-            <li>빠른 예약</li>
+            <li className="dropDown">빠른 예약</li>
             <li>승마장 찾기</li>
             <li>문의 Q & A </li>
             <li>About Us</li>
