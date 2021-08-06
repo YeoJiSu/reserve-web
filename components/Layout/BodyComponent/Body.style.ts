@@ -1,12 +1,19 @@
 import styled from "styled-components";
-
-export const BodySS = styled.div``;
 export const Container = styled.div`
-  height: 1000px;
+  height: 850px;
   min-width: 1200px;
+  h1 {
+    position: relative;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-family: test;
+    color: #fff;
+    z-index: 10;
+  }
 `;
 
 export const FillImage = styled.img`
+  //  display: ${(isShow) => (isShow ? "inline" : "none")};
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -44,6 +51,32 @@ export const Picker = styled.div<{ background: string }>`
   height: 12px;
   border-radius: 50%;
   background-color: ${(props) => props.background};
-  margin: 0 6px;
+  margin: 0 5px 30px;
   cursor: pointer;
+`;
+export const BodySS = styled.div`
+  .aboutUs1 {
+    background-color: black;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+    // justify-content: center;
+    ///align-items: center;
+
+    .box {
+      color: white;
+      padding: 100px;
+      width: 500px;
+      font-size: 20px;
+      font-weight: 900;
+
+      .content {
+        color: black;
+      }
+      .content:hover {
+        color: white;
+      }
+    }
+  }
 `;
