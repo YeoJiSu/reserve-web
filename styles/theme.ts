@@ -4,4 +4,6 @@ export const theme = {
 
   purple: "#7958ff",
   purple_bold: "#5840b7cf",
+
+  mobile_width: "200px",
 };
