@@ -1,11 +1,16 @@
 import React from "react";
 import { InputStyled } from "./Input.Styled";
 
-const InputPresenter = (): JSX.Element => {
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  icon?: JSX.Element;
+}
+
+const InputPresenter = ({ icon, ...props }: IProps): JSX.Element => {
   return (
-    <>
-      <InputStyled />
-    </>
+    <InputStyled iconExits={!!icon}>
+      <input {...props} />
+      <div className="input-iconwrapper">{icon}</div>
+    </InputStyled>
   );
 };
 

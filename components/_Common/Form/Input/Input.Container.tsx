@@ -1,10 +1,10 @@
 import React from "react";
 import InputPresenter from "./Input.Presenter";
 
-const InputContainer = (): JSX.Element => {
+const InputContainer = ({ icon, placeholder }): JSX.Element => {
   return (
     <>
-      <InputPresenter />
+      <InputPresenter icon={icon} placeholder={placeholder} />
     </>
   );
 };
