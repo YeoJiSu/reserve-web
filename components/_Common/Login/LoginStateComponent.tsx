@@ -2,9 +2,11 @@ import React from "react";
 import Link from "next/link";
 interface LoginStateComponentPorps {
   isLoggedIn: boolean;
+  isUserData?: any;
 }
 const LoginStateComponent = ({
   isLoggedIn,
+  isUserData,
 }: LoginStateComponentPorps): JSX.Element => {
   // 로그인 상태일 떄
   if (isLoggedIn === true) {
@@ -13,7 +15,7 @@ const LoginStateComponent = ({
         <p>
           <span>예약 조회</span>
           <span>팔로잉</span>
-          <span>OOO 님</span>
+          <span>{isUserData?.username} 님</span>
           <span>로그아웃</span>
         </p>
       </>

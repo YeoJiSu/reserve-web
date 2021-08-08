@@ -26,10 +26,10 @@ export const getServerSideProps = wrapper.getServerSideProps(
     if (context.req && cookie) {
       axios.defaults.headers.Cookie = cookie;
     }
-    console.log(
-      "프론트서버에서 쿠키가 공유되는걸 방지하기 위해 if문으로 조건 작업 진행",
-      axios.defaults.headers.Cookie,
-    );
+    // console.log(
+    //   "프론트서버에서 쿠키가 공유되는걸 방지하기 위해 if문으로 조건 작업 진행",
+    //   axios.defaults.headers.Cookie,
+    // );
     await context.store.dispatch(loadUser());
   },
 );

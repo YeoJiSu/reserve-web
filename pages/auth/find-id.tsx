@@ -3,9 +3,7 @@ import { useSelector } from "react-redux";
 
 import { RootState } from "@/slices/index";
 const FindIDPage = (): JSX.Element => {
-  const { email, nickname } = useSelector(
-    (state: RootState) => state.user.user,
-  );
+  const { email, data } = useSelector((state: RootState) => state.user.user);
 
   useEffect(() => {}, []);
   setTimeout(() => {
@@ -17,7 +15,7 @@ const FindIDPage = (): JSX.Element => {
       <div>
         <h1>
           <input type="text" />
-          <strong>{nickname}님</strong> 환영합니다.
+          <strong>{data}님</strong> 환영합니다.
         </h1>
         <p>{email}</p>
       </div>

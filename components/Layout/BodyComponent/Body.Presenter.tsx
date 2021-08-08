@@ -23,10 +23,10 @@ const BodyPresenter = (): JSX.Element => {
     axios
       .get("https://strapi.kspark.link/main-slides")
       .then((response: AxiosResponse) => {
-        console.log("response", response); // response에는 config,data,headers,request 등 ... 이 있음
+        // console.log("response", response); // response에는 config,data,headers,request 등 ... 이 있음
 
         const inOrder = response.data.sort(ascending); // 선택정렬
-        console.log("inorder", inOrder);
+        // console.log("inorder", inOrder);
 
         const update = inOrder
           .filter((value) => {
@@ -37,7 +37,7 @@ const BodyPresenter = (): JSX.Element => {
           .map((value) => {
             return value;
           });
-        console.log("update", update);
+        // console.log("update", update);
 
         setSliderList(update);
 
@@ -50,7 +50,7 @@ const BodyPresenter = (): JSX.Element => {
         */
       });
   }, []);
-  console.log("sliders", sliders);
+  // console.log("sliders", sliders);
   const [pickers, setPickers] = useState<JSX.Element[]>([]);
   // 이미지 순서를 클릭하여 이동하는 pickers 배열
 

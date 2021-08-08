@@ -6,8 +6,12 @@ import Link from "next/link";
 
 interface HeaderPresenterProps {
   isLoggedIn: boolean;
+  isUserData?: any;
 }
-const HeaderPresenter = ({ isLoggedIn }: HeaderPresenterProps): JSX.Element => {
+const HeaderPresenter = ({
+  isLoggedIn,
+  isUserData,
+}: HeaderPresenterProps): JSX.Element => {
   return (
     <>
       <HeaderSS isLoggedIn={isLoggedIn}>
@@ -16,7 +20,10 @@ const HeaderPresenter = ({ isLoggedIn }: HeaderPresenterProps): JSX.Element => {
             🦄 러브 홀스 <a>love horse</a>
           </p>
           <div className={"header-login"}>
-            <LoginStateComponent isLoggedIn={isLoggedIn} />
+            <LoginStateComponent
+              isLoggedIn={isLoggedIn}
+              isUserData={isUserData}
+            />
           </div>
         </div>
         <div className="header-bottom">

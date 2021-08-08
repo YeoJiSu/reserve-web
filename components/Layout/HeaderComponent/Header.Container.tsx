@@ -5,9 +5,10 @@ import { useSelector } from "react-redux";
 
 const HeaderContainer = (): JSX.Element => {
   const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  const isUserData = useSelector((state: RootState) => state.user.user.data);
   const [loginState, setLoginState] = useState<boolean>(isLoggedIn);
 
-  // console.log(isLoggedIn);
+  console.log(isUserData);
   useEffect(() => {
     if (loginState !== undefined) {
       setLoginState(isLoggedIn);
@@ -16,7 +17,7 @@ const HeaderContainer = (): JSX.Element => {
 
   return (
     <>
-      <HeaderPresenter isLoggedIn={isLoggedIn} />
+      <HeaderPresenter isLoggedIn={isLoggedIn} isUserData={isUserData} />
     </>
   );
 };
