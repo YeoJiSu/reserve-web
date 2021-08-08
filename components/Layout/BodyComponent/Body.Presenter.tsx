@@ -9,7 +9,7 @@ import {
   Arrow,
   Picker,
 } from "./Body.style";
-import { images } from "public/Images";
+//import { images } from "public/Images";
 
 const ascending = (a, b) => {
   //오름차순
@@ -174,27 +174,6 @@ const BodyPresenter = (): JSX.Element => {
           <div className="box">
             <hr />
             <span className="title">Love Horse</span>
-          </div>
-        </div>
-        <div className="aboutUs1">
-          <div className="box">
-            <span className="content">
-              Love horse는 체계적인 승마 예약 시스템입니다.
-              <br />
-              예약을 쉽고 간편하게 빠르게 파악할 수 있습니다
-            </span>
-          </div>
-
-          <div className="box">
-            <span className="content">애애</span>
-          </div>
-
-          <div className="box">
-            <span className="content">Love Horse</span>
-          </div>
-
-          <div className="box">
-            <span className="content">Love Horse</span>
           </div>
         </div>
       </BodySS>
