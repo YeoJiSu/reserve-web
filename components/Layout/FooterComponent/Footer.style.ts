@@ -1,8 +1,22 @@
 import styled from "styled-components";
+import { theme } from "@/styles/theme";
 
 export const FooterSS = styled.div`
   color: white;
   min-width: 600px;
+  @media screen and (max-width: ${(props) => props.theme.mobile_width}) {
+    .footer-top {
+      .image {
+        .phoneImage1 {
+          width: "150px";
+        }
+      }
+      .num {
+      }
+    }
+    .footer-bottom {
+    }
+  }
 
   background-color: gray;
   .footer-top {
@@ -12,7 +26,7 @@ export const FooterSS = styled.div`
     .image {
       text-align: center;
       //padding-right: 300px;
-
+ width: "30px";
       .phoneImage1 {
         margin-right: 20%;
       }
