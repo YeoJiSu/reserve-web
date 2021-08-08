@@ -9,7 +9,7 @@ function transformUploads(uploads) {
 export const S3ImageUpload = (): void => {
   const [images, setImages] = useState(null);
 
-  console.log(images);
+  // console.log(images);
   const fetchUploads = useCallback(() => {
     fetch("http://localhost:4000/api/s3-uploads")
       .then((response) =>

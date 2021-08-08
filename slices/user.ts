@@ -6,7 +6,7 @@ import { UserFormType } from "@/types/loginFormType";
 // 초기값
 const initialState = {
   user: <UserFormType>{
-    nickname: "",
+    data: "",
     identifier: "",
     password: "",
   },
@@ -48,8 +48,8 @@ const userSlice = createSlice({
         // console.log("logIn.fulfilled");
         state.isLoading = false;
         state.isLoggedIn = true;
-        state.user.identifier = action.payload.identifier;
-        state.user.nickname = action.payload.nick;
+        state.user.identifier = action.payload.jwt;
+        state.user.data = action.payload.user;
       })
       // 로그인 - 실패
       .addCase(logIn.rejected, (state, action: PayloadAction<any>) => {
@@ -72,7 +72,7 @@ const userSlice = createSlice({
         state.isLoading = false;
         state.isLoggedIn = true;
         state.user.identifier = action.payload.identifier;
-        state.user.nickname = action.payload.nick;
+        state.user.data = action.payload.nick;
       })
       .addCase(loadUser.rejected, (state, action) => {
         state.isLoading = false;

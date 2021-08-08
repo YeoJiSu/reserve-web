@@ -1,5 +1,5 @@
 export interface UserFormType {
-  nickname?: string;
+  data?: string;
   identifier: string;
   password: string;
 }
