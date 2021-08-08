@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "@/styles/theme";
+//import { theme } from "@/styles/theme";
 
 export const FooterSS = styled.div`
   color: white;
@@ -26,7 +26,7 @@ export const FooterSS = styled.div`
     .image {
       text-align: center;
       //padding-right: 300px;
- width: "30px";
+      width: "30px";
       .phoneImage1 {
         margin-right: 20%;
       }
