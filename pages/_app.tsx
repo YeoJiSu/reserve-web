@@ -4,7 +4,6 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
 import React from "react";
 import { GlobalStyles } from "styles/global";
-import { NextSeo } from "next-seo";
 import wrapper from "@/store/configureStore"; // redux store
 
 const DEFAULT_SEO = {
