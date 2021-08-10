@@ -1,47 +1,84 @@
 import styled from "styled-components";
-//import { theme } from "@/styles/theme";
 
-export const FooterSS = styled.div`
-  color: white;
-  min-width: 600px;
-  @media screen and (max-width: ${(props) => props.theme.mobile_width}) {
-    .footer-top {
-      .image {
-        .phoneImage1 {
-          width: "150px";
-        }
-      }
-      .num {
-      }
-    }
-    .footer-bottom {
+export const FooterStyle = styled.footer`
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+
+  .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* Footer links */
+
+  p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease 0.25s;
+  }
+
+  .footer-title {
+    font-size: 24px;
+  }
+
+  p.footer-links a {
+    display: inline-block;
+    line-height: 2.1;
+    text-decoration: none;
+    color: inherit;
+    transition: ease 0.25s;
+    padding: 0px 25px 0px 0px;
+  }
+  .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+
+    .images {
+      width: 30px;
     }
   }
 
-  background-color: gray;
-  .footer-top {
-    padding-top: 10px;
+  .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
     font-size: 20px;
-
-    .image {
-      text-align: center;
-      //padding-right: 300px;
-      width: "30px";
-      .phoneImage1 {
-        margin-right: 20%;
-      }
-    }
-    .num {
-      margin-left: 50px;
-      text-align: center;
-      span :nth-child(1) {
-        margin-right: 20%;
-      }
-    }
-  }
-  .footer-bottom {
-    padding-top: 50px;
-    padding-bottom: 10px;
+    color: #ffffff;
     text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition: all 0.25s;
+  }
+
+  .footer-right a:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width: ${(props) => props.theme.mobile_width}) {
+    .footer-left,
+    .footer-right {
+      text-align: center;
+    }
+    .footer-right {
+      float: none;
+      margin: 0 auto 20px;
+    }
+    .footer-left p.footer-links {
+      line-height: 1.8;
+    }
   }
 `;
