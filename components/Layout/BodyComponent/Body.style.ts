@@ -1,7 +1,8 @@
 import styled from "styled-components";
 export const Container = styled.div`
-  height: 850px;
+  height: 700px;
   min-width: 1200px;
+
   h1 {
     position: relative;
     font-size: 8rem;
@@ -17,33 +18,38 @@ export const FillImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @media screen and (max-width: 485px){
+    height:1200px;
+  }
 `;
 
 export const PickerWrapper = styled.div`
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translate(-50%);
+  //position: center;
+  //bottom: 10px;
+  //transform: translate(-50%);
+  margin-left:50%;
+  margin-top:-40px;
   display: flex;
+  @media screen and (max-width: 485px){
+    display:none;
+  }
 `;
 
 export const Arrow = styled.div<{ isLeft: boolean }>`
-  width: 50px;
-  height: 50px;
-  //background-color: gray;
-  border-width: 10px;
-  border-color: red;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  ${(props) => (props.isLeft ? "left: 5px" : "right: 5px")};
-  transform: translate(-5px, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  color: white;
-  cursor: pointer;
+
+  ${(props) => (props.isLeft ? "left: 5px; float:left;" : "right: 5px; float:right;")};
+  transform: translate(0px, -300px);
+  //display: flex;
+  
+  
+  @media screen and (max-width: 485px){
+  
+    img{
+      width:120px;
+    }
+    transform: translate(0px, -500%);
+    
+  }
 `;
 
 export const Picker = styled.div<{ background: string }>`
@@ -53,14 +59,17 @@ export const Picker = styled.div<{ background: string }>`
   background-color: ${(props) => props.background};
   margin: 0 5px 30px;
   cursor: pointer;
+
 `;
 export const BodySS = styled.div`
-  .aboutUs1 {
-    background-color: black;
+background-color: black;
+width:1200px;
+//height:500px;
+  .aboutUs1{
     display: flex;
     padding: 10px;
     width: 100%;
-    height: 300px;
+    height: 500px;
     // justify-content: center;
     ///align-items: center;
 
@@ -76,6 +85,29 @@ export const BodySS = styled.div`
       }
       .content:hover {
         color: white;
+      }
+    }
+  }
+  @media screen and (max-width: 485px){
+    background-color: black;
+    width:1200px;
+    height:2500px;
+    .aboutUs1 {
+      margin-top:500px;
+      display: block;
+      .box {
+        color: white;
+        padding: 100px;
+        width: 500px;
+        font-size: 20px;
+        font-weight: 900;
+  
+        .content {
+          color: silver;
+        }
+        .content:hover {
+          color: white;
+        }
       }
     }
   }
