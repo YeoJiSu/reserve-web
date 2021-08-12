@@ -3,14 +3,15 @@ import styled from "styled-components";
 //styled-component 적용하기
 export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   //background-color: ${(props) => props.theme.blue};
-
-  min-width: 1322px;
+  z-index:2;
+  min-width: 1100px;
   position: fixed;
   background-color: white;
   top: -10px;
   left: 0;
   right: 0;
   height: 90px;
+  
   padding: 0px 70px 10px 70px;
 
   //min-width: 750px;
@@ -88,29 +89,30 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   .header-bottom {
     display: none;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 485px) {
+    
     height: 200px;
-
+    //min-width: 280px;//왜 적용이 안되지..?
+   
     .logo img {
       width: 450px;
     }
     .header-login {
       display: none;
-      // display: none;
     }
     .pages {
       display: none;
     }
     .description {
-      display: inline;
+      display: flex;
       float: right;
       margin-top: 60px;
-      margin-right: 100px;
+      margin-right: 10px;
     }
     .reserve {
+      display: flex;
       float: right;
       padding-right: 60px;
-      display: flex;
       flex-direction: row;
       align-items: center;
       flex-wrap: nowrap;
