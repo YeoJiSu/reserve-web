@@ -6,4 +6,5 @@ export const theme = {
   purple_bold: "#5840b7cf",
 
   mobile_width: "200px",
+  new_width:"1010px",
 };
