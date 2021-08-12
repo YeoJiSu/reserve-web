@@ -89,10 +89,54 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   .header-bottom {
     display: none;
   }
+
+   @media screen and (max-width: ${(props) => props.theme.new_width}){
+    min-width:670px;
+     .header-login {
+       display: none;
+     }
+     .pages {
+       display: none;
+     }
+     .description {
+       display: flex;
+       float: right;
+       margin-top: 25px;
+       margin-right: 20px;
+       img{
+         width:50px;
+       }
+     }
+     .reserve {
+      display: flex;
+      float: right;
+      padding-right: 60px;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      height: 100%;
+      margin-top: 15px;
+      p {
+        text-align: center;
+      }
+      span {
+        border-radius: 40px;
+        padding: 10px 30px 10px 30px;
+        margin-right: 10px;
+
+        width: 170px;
+        font-size: 20px;
+        font-weight: 200;
+        background-color: ${({ isLoggedIn }) =>
+          isLoggedIn ? "#8236009c" : "black"};
+        color: white;
+      }
+   }
+  
   @media screen and (max-width: 485px) {
     
     height: 200px;
-    //min-width: 280px;//왜 적용이 안되지..?
+    //min-width: 4500px;//왜 적용이 안되지..?
    
     .logo img {
       width: 450px;
@@ -108,6 +152,9 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
       float: right;
       margin-top: 60px;
       margin-right: 10px;
+      img{
+        width:100px;
+      }
     }
     .reserve {
       display: flex;
