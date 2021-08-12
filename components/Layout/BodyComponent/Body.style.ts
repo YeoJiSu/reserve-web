@@ -2,6 +2,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 700px;
   min-width: 1200px;
+  width:100%;//추가
+
 
   h1 {
     position: relative;
@@ -20,6 +22,7 @@ export const FillImage = styled.img`
   object-fit: cover;
   @media screen and (max-width: 485px){
     height:1200px;
+    width:100%;//추가
   }
 `;
 
@@ -63,12 +66,14 @@ export const Picker = styled.div<{ background: string }>`
 `;
 export const BodySS = styled.div`
 background-color: black;
-width:1200px;
+//width:1200px;
+min-width: 1200px;
+width:100%;//추가
 //height:500px;
   .aboutUs1{
     display: flex;
     padding: 10px;
-    width: 100%;
+    //width: 100%;
     height: 500px;
     // justify-content: center;
     ///align-items: center;
@@ -76,7 +81,8 @@ width:1200px;
     .box {
       color: white;
       padding: 100px;
-      width: 500px;
+      //width: 500px;
+      width:25%;
       font-size: 20px;
       font-weight: 900;
 
@@ -98,7 +104,7 @@ width:1200px;
       .box {
         color: white;
         padding: 100px;
-        width: 500px;
+        width: 25%;
         font-size: 20px;
         font-weight: 900;
   
