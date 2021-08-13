@@ -1,10 +1,11 @@
 import Layout from "components/Layout";
 import React from "react";
 // import Vercel from '../public/vercel.svg';
-
+import BodyContainer from "../pages/BodyComponent/Body.Container";
 const IndexPage = (): JSX.Element => {
   return (
     <Layout>
+      <BodyContainer/>
       <main className={"styles.main"}>
         <h1 className={"styles.title"}>
           
