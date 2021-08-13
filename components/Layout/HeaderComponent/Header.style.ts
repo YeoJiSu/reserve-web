@@ -132,7 +132,7 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
         color: white;
       }
    }
-  
+  }
   @media screen and (max-width: 485px) {
     
     height: 200px;
