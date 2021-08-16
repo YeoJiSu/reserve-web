@@ -1,10 +1,11 @@
 //import '../styles/globals.css’;
-import type { AppProps } from "next/app";
+import type { AppContext, AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
 import React from "react";
 import { GlobalStyles } from "styles/global";
-import wrapper from "@/store/configureStore"; // redux store
+import { cookieStringToObject } from "@/utils/tokens";
+import { wrapper } from "../store";
 
 const DEFAULT_SEO = {
   title: "러브 홀스 - 종합 승마장 예약 시스템",
@@ -38,3 +39,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   );
 };
 export default wrapper.withRedux(MyApp);
+
+MyApp.getInitialProps = async (context: AppContext) => {
+  const appInitialProps = await MyApp.getInitialProps(context);
+  const cookieObject = cookieStringToObject(context.ctx.req?.headers.cookie);
+  console.log("ㅗㄷㅁㅇㄷㄱ", cookieObject);
+  return { ...appInitialProps };
+};

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FooterStyle } from "./Footer.style";
 
@@ -18,10 +19,18 @@ const FooterPresenter = (): JSX.Element => {
             🦄 러브 홀스 <span>love horse</span>
           </p>
           <p className="footer-links">
-            <a href="#">빠른예약</a>
-            <a href="#">승마장 찾기</a>
-            <a href="#">문의 Q & A</a>
-            <a href="#">About Us</a>
+            <Link href="/quick-reserve">
+              <a href="#">빠른예약</a>
+            </Link>
+            <Link href="/horse-riding/search">
+              <a href="#">승마장 찾기</a>
+            </Link>
+            <Link href="/help">
+              <a href="#">문의 Q & A</a>
+            </Link>
+            <Link href="/help/abouts">
+              <a href="#">About Us</a>
+            </Link>
           </p>
           <p>010-2542-3650 | duwltn1301@naver.com</p>
           <p>Copyright © 2020 LoveHORSE Inc.</p>

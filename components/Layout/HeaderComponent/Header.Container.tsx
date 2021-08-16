@@ -8,7 +8,6 @@ const HeaderContainer = (): JSX.Element => {
   const isUserData = useSelector((state: RootState) => state.user.user.data);
   const [loginState, setLoginState] = useState<boolean>(isLoggedIn);
 
-  console.log(isUserData);
   useEffect(() => {
     if (loginState !== undefined) {
       setLoginState(isLoggedIn);

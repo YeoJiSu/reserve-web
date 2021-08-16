@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 //import { images } from "public/Images";
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 import {
   BodySS,
   Container,
@@ -9,6 +9,7 @@ import {
   Arrow,
   Picker,
 } from "./Body.style";
+import axios from "@/utils/axios";
 //import { images } from "public/Images";
 
 const ascending = (a, b) => {
