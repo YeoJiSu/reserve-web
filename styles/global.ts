@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: any }>`
 .loader {
   position: relative;
   margin: 0 auto;
-  width: 60px;
+  width: 360px;
   height: 100vh;
 
   display: -webkit-flex;
