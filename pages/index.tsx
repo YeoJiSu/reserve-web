@@ -8,9 +8,7 @@ const IndexPage = (): JSX.Element => {
       <BodyContainer />
       <main className={"styles.main"}>
         <h1 className={"styles.title"}></h1>
-        <p className={"styles.description"}>
-          {/*<code className={"styles.code"}></code>*/}
-        </p>
+        <p className={"styles.description"}></p>
       </main>
     </Layout>
   );

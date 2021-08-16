@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-import { RootState } from "@/slices/index";
+import { RootState } from "@/sotre/index";
 const FindIDPage = (): JSX.Element => {
   const { email, data } = useSelector((state: RootState) => state.user.user);
 
