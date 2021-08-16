@@ -5,6 +5,7 @@ import React from "react";
 import { GlobalStyles } from "styles/global";
 import { cookieStringToObject } from "@/utils/tokens";
 import { wrapper } from "../store";
+import Layout from "@/components/Layout";
 
 // const DEFAULT_SEO = {
 //   title: "러브 홀스 - 종합 승마장 예약 시스템",
@@ -33,7 +34,9 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 };
