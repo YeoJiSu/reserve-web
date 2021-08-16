@@ -1,7 +1,7 @@
 import React from "react";
 import BodyPresenter from "./Body.Presenter";
 
-const BodyContainer = () => {
+const BodyContainer: React.FC = () => {
   return (
     <>
       <BodyPresenter />

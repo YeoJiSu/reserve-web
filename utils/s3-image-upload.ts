@@ -6,7 +6,8 @@ function transformUploads(uploads) {
     thumbnail: u.thumbnailUrl,
   }));
 }
-export const S3ImageUpload = (): void => {
+// Return Type 변경 해야함
+export const S3ImageUpload: any = () => {
   const [images, setImages] = useState(null);
 
   // console.log(images);
@@ -21,4 +22,6 @@ export const S3ImageUpload = (): void => {
   useEffect(() => {
     fetchUploads();
   }, [fetchUploads]);
+
+  return images;
 };
