@@ -8,10 +8,10 @@ const FooterPresenter = (): JSX.Element => {
       <FooterStyle>
         <div className="footer-right">
           <a onClick={(e) => console.log(e)}>
-            <img className="images" alt="icon1" src="icon1.png" />
+            <img className="images" alt="icon1" src="/icon1.png" />
           </a>
           <a onClick={(e) => console.log(e)}>
-            <img className="images" alt="icon2" src="icon2.png" />
+            <img className="images" alt="icon2" src="/icon2.png" />
           </a>
         </div>
         <div className="footer-left">

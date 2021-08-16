@@ -59,7 +59,7 @@ export const Picker = styled.div<{ background: string }>`
   margin: 0 5px 30px;
   cursor: pointer;
 `;
-export const BodySS = styled.div`
+export const MainStyled = styled.div`
   background-color: black;
   //width:1200px;
   min-width: 1200px;

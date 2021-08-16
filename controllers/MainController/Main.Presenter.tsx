@@ -1,23 +1,21 @@
 import React, { useCallback, useEffect, useState } from "react";
-//import { images } from "public/Images";
 import { AxiosResponse } from "axios";
 import {
-  BodySS,
+  MainStyled,
   Container,
   FillImage,
   PickerWrapper,
   Arrow,
   Picker,
-} from "./Body.style";
+} from "./Main.Style";
 import axios from "@/utils/axios";
-//import { images } from "public/Images";
 
 const ascending = (a, b) => {
   //오름차순
   return a.img_order < b.img_order ? -1 : a.img_order > b.img_order ? 1 : 0;
 };
 
-const BodyPresenter = (): JSX.Element => {
+const MainPresenter = (): JSX.Element => {
   const [sliders, setSliderList] = useState([]);
 
   useEffect(() => {
@@ -127,7 +125,7 @@ const BodyPresenter = (): JSX.Element => {
 
   return (
     <>
-      <BodySS>
+      <MainStyled>
         <Container>
           {/*
           <FillImage
@@ -177,9 +175,9 @@ const BodyPresenter = (): JSX.Element => {
             <span className="title">Love Horse</span>
           </div>
         </div>
-      </BodySS>
+      </MainStyled>
     </>
   );
 };
 
-export default BodyPresenter;
+export default MainPresenter;

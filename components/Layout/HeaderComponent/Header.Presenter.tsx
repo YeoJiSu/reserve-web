@@ -19,7 +19,7 @@ const HeaderPresenter = ({
           <div className={"logo"}>
             <Link href="/">
               <a>
-                <img src={"logo.png"} width="200px" alt="" />
+                <img src={"/logo.png"} width="200px" alt="" />
               </a>
             </Link>
           </div>
@@ -57,7 +57,7 @@ const HeaderPresenter = ({
         </div>
 
         <div className={"description"}>
-          <img src={"menu.png"} width="100px" alt="" />
+          <img src={"/menu.png"} width="100px" alt="" />
         </div>
         <div className="reserve">
           <p>
