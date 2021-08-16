@@ -25,7 +25,6 @@
       "@/assets/*": ["public/assets/*"],
       "@/reducers/*": ["reducers/*"],
       "@/sagas/*": ["sagas/*"],
-      "@/sotre/*": ["sotre/*"],
       "@/slices/*": ["slices/*"],
       "@/store/*": ["store/*"],
       "@/styles/*": ["styles/*"],

@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-import { RootState } from "@/sotre/index";
+import { RootState } from "@/store/index";
 const FindIDPage = (): JSX.Element => {
-  const { email, data } = useSelector((state: RootState) => state.user.user);
+  // const { email, data } = useSelector((state: RootState) => state.user.user);
+  const data = useSelector((state: RootState) => state.user.user);
+  console.log("useSelector", data);
 
   useEffect(() => {}, []);
   setTimeout(() => {
@@ -14,10 +16,9 @@ const FindIDPage = (): JSX.Element => {
     <>
       <div>
         <h1>
-          <input type="text" />
-          <strong>{data}님</strong> 환영합니다.
+          <strong>{data.username}님</strong> 환영합니다.
         </h1>
-        <p>{email}</p>
+        <p>{data.email}</p>
       </div>
     </>
   );
