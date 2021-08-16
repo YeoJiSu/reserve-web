@@ -5,11 +5,9 @@ import BodyContainer from "../pages/BodyComponent/Body.Container";
 const IndexPage = (): JSX.Element => {
   return (
     <Layout>
-      <BodyContainer/>
+      <BodyContainer />
       <main className={"styles.main"}>
-        <h1 className={"styles.title"}>
-          
-        </h1>
+        <h1 className={"styles.title"}></h1>
         <p className={"styles.description"}>
           {/*<code className={"styles.code"}></code>*/}
         </p>
