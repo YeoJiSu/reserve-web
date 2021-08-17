@@ -39,4 +39,11 @@ export const GlobalStyles = createGlobalStyle<{ theme: any }>`
   -ms-justify-content: center;
   justify-content: center;
 }
+
+.slick-dots {
+  bottom: 25px !important;
+}
+.slick-dots li button:before {
+  font-size: 30px;
+}
 `;
