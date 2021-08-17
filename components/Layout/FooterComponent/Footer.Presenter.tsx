@@ -33,7 +33,7 @@ const FooterPresenter = (): JSX.Element => {
             </Link>
           </p>
           <p>010-2542-3650 | duwltn1301@naver.com</p>
-          <p>Copyright © 2020 LoveHORSE Inc.</p>
+          <p>Copyright © 2021 LoveHORSE Inc.</p>
         </div>
       </FooterStyle>
     </>
