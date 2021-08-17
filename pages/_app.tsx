@@ -6,7 +6,7 @@ import { GlobalStyles } from "styles/global";
 import { cookieStringToObject } from "@/utils/tokens";
 import { wrapper } from "../store";
 import Layout from "@/components/Layout";
-
+// import "@/styles/slick.module.css";
 // const DEFAULT_SEO = {
 //   title: "러브 홀스 - 종합 승마장 예약 시스템",
 //   description: "러브 홀스 - 종합 승마장 예약 시스템",
