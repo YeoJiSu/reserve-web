@@ -9,7 +9,7 @@ const Layout = ({ children }: Props): JSX.Element => {
   return (
     <>
       <HeaderContainer />
-      <span>{children}</span>
+      <main style={{ height: "100%" }}>{children}</main>
       <FooterContainer />
     </>
   );
