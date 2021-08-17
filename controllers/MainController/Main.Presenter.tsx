@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
+import Slider from "react-slick";
 import { AxiosResponse } from "axios";
 import {
   MainStyled,
@@ -9,6 +10,21 @@ import {
   Picker,
 } from "./Main.Style";
 import axios from "@/utils/axios";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styled from "styled-components";
+const Custom = styled(Slider)`
+  * {
+    max-width: 100%;
+  }
+`;
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const ascending = (a, b) => {
   //오름차순
@@ -22,10 +38,7 @@ const MainPresenter = (): JSX.Element => {
     axios
       .get("https://strapi.kspark.link/main-slides")
       .then((response: AxiosResponse) => {
-        // console.log("response", response); // response에는 config,data,headers,request 등 ... 이 있음
-
-        const inOrder = response.data.sort(ascending); // 선택정렬
-        // console.log("inorder", inOrder);
+        const inOrder = response.data.sort(ascending);
 
         const update = inOrder
           .filter((value) => {
@@ -36,17 +49,8 @@ const MainPresenter = (): JSX.Element => {
           .map((value) => {
             return value;
           });
-        // console.log("update", update);
 
         setSliderList(update);
-
-        /*
-        const img_url = response.data.map((value) => {
-          //내가 쓸 건 그중애서 data 의 img url
-          return value.img_url;
-        });
-        setSliderList(img_url); // setSliderList에 이미지 url 정보 넣어주기
-        */
       });
   }, []);
   // console.log("sliders", sliders);
@@ -74,22 +78,18 @@ const MainPresenter = (): JSX.Element => {
 
   const onPickIndex = useCallback(
     (idx: number): void => {
-      if (pickIndex === idx) {
-        // 선택되어 있는 인덱스를 클릭시에는 아무것도 실행하지 않는다.
+      if (pickIndex !== idx) {
+        setPickIndex(idx);
         return;
       }
-
-      setPickIndex(idx);
     },
     [pickIndex],
   );
 
   useEffect(() => {
-    // 이미지의 갯수만큼 pickers JSX.Element[] 배열 state에 생성하여 넣어준다.
     setPickers(
       sliders.map((_: string, idx: number) => {
         return (
-          // eslint-disable-next-line react/jsx-key
           <Picker
             onClick={() => onPickIndex(idx)}
             background={pickIndex === idx ? "orange" : "white"}
@@ -99,18 +99,6 @@ const MainPresenter = (): JSX.Element => {
     );
   }, [onPickIndex, pickIndex]);
 
-  /* setInterval 함수를 이용해서 슬라이드 넘기기 
-  useEffect(() => {
-    const imageInterval = setInterval(() => {
-      clickRight();
-    }, 3000);
-    return () => {
-      clearInterval(imageInterval);
-    };
-  }, [pickIndex]);
-  */
-
-  // setTimeout 함수를 이용해서 슬라이드 넘기기
   useEffect(() => {
     const timer = setTimeout(() => {
       if (pickIndex + 1 === sliders.length) {
@@ -123,58 +111,40 @@ const MainPresenter = (): JSX.Element => {
     return () => clearTimeout(timer);
   }, [pickIndex]);
 
+  const sliderRef: any = useRef();
+
   return (
     <>
       <MainStyled>
         <Container>
-          {/*
-          <FillImage
-            src={sliders[pickIndex]?.img_url}
-            alt={sliders[pickIndex]?.img_title}
-          />
-          */}
-          {sliders.map((value, index) => {
-            return (
-              <>
-                <FillImage
-                  key={index}
-                  style={{ display: index === pickIndex ? "inline" : "none" }}
-                  src={sliders[pickIndex]?.img_url}
-                  alt={sliders[pickIndex]?.img_title}
-                />
-              </>
-            );
-          })}
-
-          <Arrow isLeft={true} onClick={clickLeft}>
-            <img src="left.png" width="50px" />
-          </Arrow>
-          <Arrow isLeft={false} onClick={clickRight}>
-            <img src="right.png" width="50px" />
-          </Arrow>
-          <PickerWrapper>{pickers}</PickerWrapper>
+          <Custom {...settings} ref={sliderRef}>
+            {sliders.map((value) => {
+              return (
+                <>
+                  <FillImage src={value?.img_url} alt={value?.img_title} />
+                </>
+              );
+            })}
+          </Custom>
+          <div>
+            <Arrow
+              isLeft={true}
+              onClick={() => {
+                sliderRef.current.slickPrev();
+              }}
+            >
+              <img src="left.png" width="50px" />
+            </Arrow>
+            <Arrow
+              isLeft={false}
+              onClick={() => {
+                sliderRef.current.slickNext();
+              }}
+            >
+              <img src="right.png" width="50px" />
+            </Arrow>
+          </div>
         </Container>
-
-        <div className="aboutUs1">
-          {/* map으로 반복문 돌리는 걸로 수정하기  */}
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-            <span className="content">애애</span>
-          </div>
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-          </div>
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-          </div>
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-          </div>
-        </div>
       </MainStyled>
     </>
   );

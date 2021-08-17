@@ -1,6 +1,5 @@
 import styled from "styled-components";
 export const Container = styled.div`
-  height: 700px;
   min-width: 1200px;
   width: 100%; //추가
 
@@ -19,6 +18,7 @@ export const FillImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+
   @media screen and (max-width: 485px) {
     height: 1200px;
     width: 100%; //추가
@@ -40,7 +40,7 @@ export const PickerWrapper = styled.div`
 export const Arrow = styled.div<{ isLeft: boolean }>`
   ${(props) =>
     props.isLeft ? "left: 5px; float:left;" : "right: 5px; float:right;"};
-  transform: translate(0px, -300px);
+  transform: translate(0px, -500px);
   //display: flex;
 
   @media screen and (max-width: 485px) {
@@ -65,30 +65,7 @@ export const MainStyled = styled.div`
   min-width: 1200px;
   width: 100%; //추가
   //height:500px;
-  .aboutUs1 {
-    display: flex;
-    padding: 10px;
-    //width: 100%;
-    height: 500px;
-    // justify-content: center;
-    ///align-items: center;
 
-    .box {
-      color: white;
-      padding: 100px;
-      //width: 500px;
-      width: 25%;
-      font-size: 20px;
-      font-weight: 900;
-
-      .content {
-        color: black;
-      }
-      .content:hover {
-        color: white;
-      }
-    }
-  }
   @media screen and (max-width: 485px) {
     background-color: black;
     width: 1200px;
