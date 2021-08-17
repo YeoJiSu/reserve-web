@@ -21,6 +21,8 @@
       "@/action/*": ["action/*"],
       "@/components/*": ["components/*"],
       "@/controllers/*": ["controllers/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/lib/*": ["lib/*"],
       "@/pages/*": ["pages/*"],
       "@/assets/*": ["public/assets/*"],
       "@/reducers/*": ["reducers/*"],
