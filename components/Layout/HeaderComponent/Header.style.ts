@@ -3,7 +3,7 @@ import styled from "styled-components";
 //styled-component 적용하기
 export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   //background-color: ${(props) => props.theme.blue};
-  z-index:2;
+  z-index: 2;
   min-width: 1100px;
   position: fixed;
   background-color: white;
@@ -11,7 +11,7 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
   left: 0;
   right: 0;
   height: 90px;
-  
+
   padding: 0px 70px 10px 70px;
 
   //min-width: 750px;
@@ -90,24 +90,24 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
     display: none;
   }
 
-   @media screen and (max-width: ${(props) => props.theme.new_width}){
-    min-width:670px;
-     .header-login {
-       display: none;
-     }
-     .pages {
-       display: none;
-     }
-     .description {
-       display: flex;
-       float: right;
-       margin-top: 25px;
-       margin-right: 20px;
-       img{
-         width:50px;
-       }
-     }
-     .reserve {
+  @media screen and (max-width: ${(props) => props.theme.new_width}) {
+    min-width: 670px;
+    .header-login {
+      display: none;
+    }
+    .pages {
+      display: none;
+    }
+    .description {
+      display: flex;
+      float: right;
+      margin-top: 25px;
+      margin-right: 20px;
+      img {
+        width: 50px;
+      }
+    }
+    .reserve {
       display: flex;
       float: right;
       padding-right: 60px;
@@ -131,13 +131,12 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
           isLoggedIn ? "#8236009c" : "black"};
         color: white;
       }
-   }
+    }
   }
   @media screen and (max-width: 485px) {
-    
     height: 200px;
     //min-width: 4500px;//왜 적용이 안되지..?
-   
+
     .logo img {
       width: 450px;
     }
@@ -152,8 +151,8 @@ export const HeaderSS = styled.div<{ isLoggedIn: boolean }>`
       float: right;
       margin-top: 60px;
       margin-right: 10px;
-      img{
-        width:100px;
+      img {
+        width: 100px;
       }
     }
     .reserve {

@@ -20,7 +20,7 @@
     "paths": {
       "@/action/*": ["action/*"],
       "@/components/*": ["components/*"],
-      "@/containers/*": ["containers/*"],
+      "@/controllers/*": ["controllers/*"],
       "@/pages/*": ["pages/*"],
       "@/assets/*": ["public/assets/*"],
       "@/reducers/*": ["reducers/*"],

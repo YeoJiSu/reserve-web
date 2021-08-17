@@ -1,10 +1,20 @@
 // 승마장 검색 페이지
-import InputContainer from "@/components/_Common/Form/Input/Input.Container";
-import Layout from "components/Layout";
+import asyncComponent from "@/components/_Common/asyncComponent";
 import React from "react";
-import EmailIcon from "@/assets/email.svg";
+
+const SearchContainer = asyncComponent(
+  () =>
+    import(
+      "@/controllers/HorseRidingController/SearchController/Search.Container"
+    ),
+);
+
 const HorseRidingSearchPage = (): JSX.Element => {
-  return <InputContainer icon={<EmailIcon />} placeholder="이름" />;
+  return (
+    <>
+      <SearchContainer />
+    </>
+  );
 };
 
 export default HorseRidingSearchPage;

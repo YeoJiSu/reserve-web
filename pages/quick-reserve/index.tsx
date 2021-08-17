@@ -1,14 +1,16 @@
 // 승마장 검색 페이지
-import Layout from "components/Layout";
+import asyncComponent from "@/components/_Common/asyncComponent";
 import React from "react";
+
+const QuickReserveContainer = asyncComponent(
+  () => import("@/controllers/QuickReserveController/QuickReserve.Container"),
+);
 
 const QuickReservePage = (): JSX.Element => {
   return (
-    <Layout>
-      <main>
-        <span>빠른예약페이지</span>
-      </main>
-    </Layout>
+    <>
+      <QuickReserveContainer />
+    </>
   );
 };
 

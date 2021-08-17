@@ -1,14 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import {
-  ErrorText,
   LoginFormBox,
   LoginWrapper,
   LoginHeader,
   LoginContainer,
   LocalSignupBox,
 } from "@/components/Auth/LoginComponent/Login.Styled";
-import { VscLoading } from "react-icons/vsc";
 
 interface LoginProps {
   onSubmitLogIn: (e) => void;
@@ -17,10 +15,6 @@ interface LoginProps {
   onChangeIdentifier: (e) => void;
   passwordInput: React.MutableRefObject<HTMLInputElement>;
   onChangePassword: (e) => void;
-  identifierError: boolean;
-  passwordError: boolean;
-  isLoading: boolean;
-  logInError: string;
 }
 
 const LoginPresenter = ({
@@ -29,10 +23,6 @@ const LoginPresenter = ({
   onChangeIdentifier,
   passwordInput,
   onChangePassword,
-  identifierError,
-  passwordError,
-  isLoading,
-  logInError,
   password,
 }: LoginProps): JSX.Element => {
   return (
@@ -66,8 +56,6 @@ const LoginPresenter = ({
                 onChange={onChangePassword}
               />
             </div>
-            {identifierError && <ErrorText>{logInError}</ErrorText>}
-            {passwordError && <ErrorText>{logInError}</ErrorText>}
             <button type="submit">로그인</button>
           </LoginFormBox>
           <LocalSignupBox>
@@ -76,7 +64,6 @@ const LoginPresenter = ({
               <Link href="/auth/register">회원가입</Link>
             </div>
           </LocalSignupBox>
-          {isLoading && <VscLoading className="loading" />}
         </LoginWrapper>
       </LoginContainer>
     </>

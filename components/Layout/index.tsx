@@ -2,7 +2,6 @@ import React from "react";
 import FooterContainer from "./FooterComponent/Footer.Container";
 import HeaderContainer from "./HeaderComponent/Header.Container";
 
-
 interface Props {
   children?: React.ReactNode;
 }
