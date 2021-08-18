@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UserFormType, userType } from "@/types/userType";
+import { userType } from "@/types/userType";
+import { setToken } from "@/utils/tokenManager";
 
 // 초기값
 const initialState = {
@@ -41,6 +42,8 @@ const userSlice = createSlice({
   // 리듀서 맵
   reducers: {
     setLoggedUser(state, action: PayloadAction<userType>) {
+      console.log(action);
+      setToken({ accessToken: action.payload.jwt });
       state = { ...action.payload, isLogged: true };
     },
   },

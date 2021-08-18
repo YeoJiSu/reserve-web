@@ -124,59 +124,57 @@ const MainPresenter = (): JSX.Element => {
   }, [pickIndex]);
 
   return (
-    <>
-      <MainStyled>
-        <Container>
-          {/*
+    <MainStyled>
+      <Container>
+        {/*
           <FillImage
             src={sliders[pickIndex]?.img_url}
             alt={sliders[pickIndex]?.img_title}
           />
           */}
-          {sliders.map((value, index) => {
-            return (
-              <>
-                <FillImage
-                  key={index}
-                  style={{ display: index === pickIndex ? "inline" : "none" }}
-                  src={sliders[pickIndex]?.img_url}
-                  alt={sliders[pickIndex]?.img_title}
-                />
-              </>
-            );
-          })}
+        {sliders.map((value, index) => {
+          return (
+            <>
+              <FillImage
+                key={index}
+                style={{ display: index === pickIndex ? "inline" : "none" }}
+                src={sliders[pickIndex]?.img_url}
+                alt={sliders[pickIndex]?.img_title}
+              />
+            </>
+          );
+        })}
 
-          <Arrow isLeft={true} onClick={clickLeft}>
-            <img src="left.png" width="50px" />
-          </Arrow>
-          <Arrow isLeft={false} onClick={clickRight}>
-            <img src="right.png" width="50px" />
-          </Arrow>
-          <PickerWrapper>{pickers}</PickerWrapper>
-        </Container>
+        <Arrow isLeft={true} onClick={clickLeft}>
+          <img src="left.png" width="50px" />
+        </Arrow>
+        <Arrow isLeft={false} onClick={clickRight}>
+          <img src="right.png" width="50px" />
+        </Arrow>
+        <PickerWrapper>{pickers}</PickerWrapper>
+      </Container>
 
-        <div className="aboutUs1">
-          {/* map으로 반복문 돌리는 걸로 수정하기  */}
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-            <span className="content">애애</span>
-          </div>
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-          </div>
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-          </div>
-          <div className="box">
-            <hr />
-            <span className="title">Love Horse</span>
-          </div>
+      <div className="aboutUs1">
+        {/* map으로 반복문 돌리는 걸로 수정하기  */}
+        <div className="box">
+          <hr />
+          <span className="title">Love Horse</span>
+          <span className="content">애애</span>
         </div>
-      </MainStyled>
-    </>
+        <div className="box">
+          <hr />
+          <span className="title">Love Horse</span>
+        </div>
+        <div className="box">
+          <hr />
+          <span className="title">Love Horse</span>
+        </div>
+        <div className="box">
+          <hr />
+          <span className="title">Love Horse</span>
+        </div>
+      </div>
+    </MainStyled>
   );
 };
 

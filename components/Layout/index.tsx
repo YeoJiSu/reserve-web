@@ -1,4 +1,5 @@
 import React from "react";
+
 import FooterContainer from "./FooterComponent/Footer.Container";
 import HeaderContainer from "./HeaderComponent/Header.Container";
 
@@ -9,7 +10,7 @@ const Layout = ({ children }: Props): JSX.Element => {
   return (
     <>
       <HeaderContainer />
-      <span>{children}</span>
+      <div>{children}</div>
       <FooterContainer />
     </>
   );

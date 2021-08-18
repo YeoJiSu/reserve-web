@@ -8,6 +8,7 @@ interface RootReducerProps {
 const rootReducer = function ({ state, action }: RootReducerProps): any {
   switch (action.type) {
     case HYDRATE:
+      console.log("HYDRATE", action);
       return action.payload;
     default: {
       const combineReducer = combineReducers({});

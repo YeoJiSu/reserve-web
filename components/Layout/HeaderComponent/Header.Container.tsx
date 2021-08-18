@@ -1,7 +1,8 @@
 import { RootState } from "@/store/index";
 import React, { useEffect, useState } from "react";
-import HeaderPresenter from "./Header.Presenter";
 import { useSelector } from "react-redux";
+
+import HeaderPresenter from "./Header.Presenter";
 
 const HeaderContainer = (): JSX.Element => {
   const isLoggedIn = useSelector((state: RootState) => state.user.isLogged);

@@ -1,13 +1,14 @@
 import React from "react";
-
+import Image from "next/image";
+import Loader from "@/assets/loading.png";
 interface CircularProgressProps {
-  className: string;
+  className?: string;
 }
 const CircularProgress = ({
   className,
 }: CircularProgressProps): JSX.Element => (
   <div className={`loader ${className}`}>
-    <img src="/assets/loading.png" alt="loader" />
+    <Image src={Loader} />
   </div>
 );
 export default CircularProgress;

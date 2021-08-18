@@ -1,12 +1,18 @@
-import type { AppContext, AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
-import { theme } from "styles/theme";
-import React from "react";
-import { GlobalStyles } from "styles/global";
-import { cookieStringToObject } from "@/utils/tokens";
-import { wrapper } from "../store";
 import Layout from "@/components/Layout";
+import { userAcions } from "@/store/user";
+import axios from "@/utils/axios";
+import { cookieStringToObject, cookieType } from "@/utils/tokens";
+import { AxiosResponse } from "axios";
+import { NextPageContext } from "next";
+import App from "next/app";
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "styles/global";
+import { theme } from "styles/theme";
 
+import { wrapper } from "../store";
+
+import type { AppContext, AppInitialProps, AppProps } from "next/app";
 // const DEFAULT_SEO = {
 //   title: "러브 홀스 - 종합 승마장 예약 시스템",
 //   description: "러브 홀스 - 종합 승마장 예약 시스템",
@@ -29,7 +35,7 @@ import Layout from "@/components/Layout";
 // };
 
 // 페이지가 로딩될 때 가장 먼저 실행됨.
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const MyApp = ({ Component, pageProps }: AppProps | any): JSX.Element => {
   // ThemeProvider에서 글로벌하게 CSS 색상을 변수로 관리한다.
   return (
     <ThemeProvider theme={theme}>
@@ -40,11 +46,45 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     </ThemeProvider>
   );
 };
-export default wrapper.withRedux(MyApp);
+
+// MyApp.getInitialProps = async (appContext) => {
+//   const appProps = await App.getInitialProps(appContext);
+
+//   return { ...appProps }
+// }
 
 MyApp.getInitialProps = async (context: AppContext) => {
-  const appInitialProps = await MyApp.getInitialProps(context);
-  const cookieObject = cookieStringToObject(context.ctx.req?.headers.cookie);
-  console.log("ㅗㄷㅁㅇㄷㄱ", cookieObject);
+  const { ctx }: { ctx: NextPageContext | any } = context;
+  const appInitialProps: AppInitialProps = await App.getInitialProps(context);
+  const cookieObject: cookieType = cookieStringToObject(
+    ctx.req?.headers.cookie,
+  );
+
+  console.log(ctx);
+  if (cookieObject.accessToken) {
+    try {
+      const result: AxiosResponse<any> = await axios.get(
+        "https://strapi.kspark.link/users/me",
+        {
+          headers: {
+            Authorization: `Bearer ${cookieObject.accessToken}`,
+          },
+        },
+      );
+      axios.defaults.headers.Cookie = cookieObject.accessToken;
+
+      const { data } = await result;
+      const newData = { user: data, jwt: cookieObject.accessToken };
+      console.log(newData);
+      // ctx.store.dispatch(userAcions.setLoggedUser(newData));
+
+      // ctx.store.dispatch({ type: LOAD_USER_REQUEST });
+    } catch (error) {
+      console.log(error, "로그인 만료");
+    }
+  }
+  console.log("123");
   return { ...appInitialProps };
 };
+
+export default wrapper.withRedux(MyApp);

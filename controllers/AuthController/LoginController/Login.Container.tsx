@@ -1,10 +1,15 @@
-import React, { useRef, useCallback } from "react";
-import { useDispatch } from "react-redux";
-import LoginPresenter from "./Login.Presenter";
-import { loginAPI } from "lib/api/auth";
-import { userType } from "@/types/userType";
+import "react-toastify/dist/ReactToastify.css";
+
 import { userAcions } from "@/store/user";
+import { userType } from "@/types/userType";
 import useInput from "hooks/useInput";
+import { loginAPI } from "lib/api/auth";
+import React, { useCallback, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { toast, ToastContainer } from "react-toastify";
+
+import LoginPresenter from "./Login.Presenter";
+
 const LoginContainer: React.FC = (): JSX.Element => {
   // Input Hooks
   const [identifier, onChangeIdentifier] = useInput("");
@@ -23,7 +28,9 @@ const LoginContainer: React.FC = (): JSX.Element => {
           identifier,
           password,
         });
+        console.log("로그인됨", data);
         dispatch(userAcions.setLoggedUser(data));
+        toast(`로그인 됨 ${data.user.username}`);
       } catch (e) {
         console.log(e);
       }
@@ -32,14 +39,17 @@ const LoginContainer: React.FC = (): JSX.Element => {
   );
 
   return (
-    <LoginPresenter
-      onSubmitLogIn={onSubmitLogIn}
-      identifier={identifier}
-      onChangeIdentifier={onChangeIdentifier}
-      passwordInput={passwordInput}
-      onChangePassword={onChangePassword}
-      password={password}
-    />
+    <>
+      <LoginPresenter
+        onSubmitLogIn={onSubmitLogIn}
+        identifier={identifier}
+        onChangeIdentifier={onChangeIdentifier}
+        passwordInput={passwordInput}
+        onChangePassword={onChangePassword}
+        password={password}
+      />
+      <ToastContainer />
+    </>
   );
 };
 

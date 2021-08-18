@@ -1,4 +1,4 @@
-interface cookieType {
+export interface cookieType {
   [key: string]: string;
 }
 
@@ -8,11 +8,16 @@ export const cookieStringToObject = (
   const cookies: cookieType = {};
 
   if (cookieString) {
-    const itemString = cookieString?.split(/\s;\s*/);
-    itemString.forEach((value) => {
-      const data = value.split(/\s*=\s*/);
-      cookies[data[0]] = data.splice(1).join("=");
-    });
+    return cookieString
+      .split(";")
+      .map((v) => {
+        return v.split("=");
+      })
+      .map(([k, ...vs]) => [k, vs.join("=")])
+      .reduce((acc, [k, v]) => {
+        acc[k.trim()] = decodeURIComponent(v);
+        return acc;
+      }, {});
   }
 
   return cookies;

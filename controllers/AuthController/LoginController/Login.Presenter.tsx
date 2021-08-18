@@ -1,5 +1,6 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
+
 import {
   LocalSignupBox,
   LoginContainer,
@@ -7,6 +8,7 @@ import {
   LoginHeader,
   LoginWrapper,
 } from "./Login.Style";
+
 interface LoginProps {
   onSubmitLogIn: (e) => void;
   identifier: string;
